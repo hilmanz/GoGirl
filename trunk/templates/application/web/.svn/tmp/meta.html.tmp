@@ -1,0 +1,312 @@
+<<<<<<< .mine
+
+     
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	{section name=i loop=$listmeta}
+         <meta name="description" content="{$listmeta[i].meta_description}">
+		 <title>{$listmeta[i].meta_title}</title>
+		{/section}
+	
+	
+	<!-- {if $metadetail}
+	{section name=i loop=$metadetail}
+    <meta name="" content="{$metadetail[i].contentisifb}">
+    <meta name="author" content="{$metadetail[i].name}">
+
+    <title>{$metadetail[i].title}</title>
+	{/section} -->
+	
+	{elseif $pages != ''}
+	
+	{if $pages=="style"}
+	  <meta name="description" content="Tips cantik, fashion, style, gaya terbaru, dan mix and match fashion item agar kamu tetap keren menjalani hari-harimu ">
+	 <title>Cerita Kita | Tips Cantik, Style, Fashion, Gaya Terbaru</title>
+	{/if}
+	{if $pages=="event"}
+	  <meta name="description" content="Event Cerita Kita dan Clean & Clear yang sedan happening. Dapatkan informasi terbarunya disini">
+	 <title>Cerita Kita | Event</title>
+	{/if}
+	{if $pages=="skin"}
+	  <meta name="description" content="Tips merawat muka dan tips ampuh mencegah jerawat datang agar kamu tetap cantik dan kulit lebih sehat">
+	 <title>Cerita Kita | Tips Merawat Muka</title>
+	{/if}
+	{if $pages=="diy"}
+	  <meta name="description" content="Ide-ide yang bisa kamu kreasikan atau Do It Your Self. Bikin barang yang gak kepakai jadi kado unik atau fashion item">
+	 <title>Cerita Kita | DIY Do It Yourself</title>
+	{/if}
+	{if $pages=="relations"}
+	  <meta name="description" content="Masalah cinta, masalah temen, masalah pacar, masalah orang tua atau masalah jomblo? Yuk share disini biar tuntas">
+	 <title>Cerita Kita | Relation dan Percintaan</title>
+	{/if}
+	{if $pages=="quiz"}
+	  <meta name="description" content="Kuis Cerita Kita. Main kuisnya dan temuin serunya yuk disini">
+	 <title>Cerita Kita | Kuis </title>
+	{/if}
+	{if $pages=="home"}
+	   
+	  <meta name="description" content="Cerita Kita: Dapatkan tips cantik, tips merawat muka, ruang berbagi tips lainnya dan cerita cewek. Yuk gabung dan berbagi sama kita">
+	 <title>Cerita Kita | Tips Cantik Dan Tips Merawat Muka</title>
+	{/if}
+        {if $pages=="search"}
+          <meta name="description" content="Cerita Kita: Dapatkan tips cantik, tips merawat muka, ruang berbagi tips lainnya dan cerita cewek. Yuk gabung dan berbagi sama kita">
+         <title>Cerita Kita | Search</title>
+        {/if}
+        {if $pages=="register"}
+          <meta name="description" content="Cerita Kita: Dapatkan tips cantik, tips merawat muka, ruang berbagi tips lainnya dan cerita cewek. Yuk gabung dan berbagi sama kita">
+         <title>Cerita Kita | Join Now!</title>
+        {/if}
+        {if $pages=="regalfa"}
+          <meta name="description" content="CERITA KITA, PROMO DISCOUNT 50% CLEAN & CLEAR® FOAMING FACIAL WASH 100 ML">
+         <title>Cerita Kita | Alfamart Cerita Kita, Promo Discount 50%</title>
+        {/if}
+        {if $pages=="about"}
+          <meta name="description" content="Cerita Kita: Dapatkan tips cantik, tips merawat muka, ruang berbagi tips lainnya dan cerita cewek. Yuk gabung dan berbagi sama kita">
+         <title>Cerita Kita | Tips Cantik Dan Tips Merawat Muka</title>
+        {/if}
+        {if $pages=="promo"}
+          <meta name="description" content="CERITA KITA, PROMO DISCOUNT 50% CLEAN & CLEAR® FOAMING FACIAL WASH 100 ML">
+         <title>Cerita Kita | Alfamart Cerita Kita, Promo Discount 50%</title>
+        {/if}
+		
+	{else}
+	 <meta name="description" content="Cerita Kita: Dapatkan tips cantik, tips merawat muka, ruang berbagi tips lainnya dan cerita cewek. Yuk gabung dan berbagi sama kita*">
+	    <!--  {section name=i loop=$listmeta}
+          <meta name="{$listmeta[i].meta_title}" content="{$listmeta[i].meta_description}">
+		{/section} -->
+		</p>
+		
+
+	 <title>Cerita Kita | Tips Cantik Dan Tips Merawat Muka </title>
+	
+{/if}
+    <!--Core CSS -->
+    <link href="{$assets_domain}vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="{$assets_domain}vendor/slicknav/slicknav.css" rel="stylesheet">
+    <link href="{$assets_domain}vendor/flexslider/flexslider.css" rel="stylesheet">
+    <link href="{$assets_domain}vendor/eufont/eufont.css" rel="stylesheet">
+    <link href="{$assets_domain}css/gogirl.css" rel="stylesheet">
+	<link href="{$assets_domain}css/responsive.css" rel="stylesheet">
+	<script src="{$assets_domain}vendor/jquery.js"></script>
+    <script src="{$assets_domain}vendor/jquery-ui.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+    <script src="{$assets_domain}vendor/bootstrap/js/bootstrap.js"></script>
+	<script src="{$assets_domain}vendor/jquery.validate.js"></script>
+	
+
+	
+	<script type="text/javascript">
+    
+        var basedomain = '{$basedomain}';
+        var pages = '{$pages}';
+    
+    </script>
+    
+
+       {if $pages == 'register' && $act=='thanksreg' || $pages == 'regalfa' && $act=='thxreg' } 
+            {literal}
+			<!-- Facebook Conversion Code for cerita kita -->
+<script>(function() {
+var _fbq = window._fbq || (window._fbq = []);
+if (!_fbq.loaded) {
+var fbds = document.createElement('script');
+fbds.async = true;
+fbds.src = '//connect.facebook.net/en_US/fbds.js';
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(fbds, s);
+_fbq.loaded = true;
+}
+})();
+window._fbq = window._fbq || [];
+window._fbq.push(['track', '6028051225219', {'value':'0.00','currency':'USD'}]);
+</script>
+<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6028051225219&amp;cd[value]=0.00&amp;cd[currency]=USD&amp;noscript=1" /></noscript>
+ 
+            {/literal}
+        {/if}
+	   
+
+{literal}
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','//connect.facebook.net/en_US/fbevents.js');
+ 
+fbq('init', '846530148750400');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=846530148750400&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+<script src="//platform.twitter.com/oct.js" type="text/javascript"></script>
+<script type="text/javascript">twttr.conversion.trackPid('l6iz0', { tw_sale_amount: 0, tw_order_quantity: 0 });</script>
+<noscript>
+<img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=l6iz0&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
+<img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=l6iz0&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
+</noscript>
+{/literal}=======
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	{if $listmeta}
+	{section name=i loop=$listmeta}
+	<meta name="description" content="{$listmeta[i].meta_description}">
+	<title>{$listmeta[i].meta_title}</title>
+	{/section}
+		
+	{/if}
+	<!-- {if $metadetail}
+	{section name=i loop=$metadetail}
+    <meta name="description" content="{$metadetail[i].contentisifb}">
+    <meta name="author" content="{$metadetail[i].name}">
+
+    <title>{$metadetail[i].title}</title>
+	{/section}
+	
+	
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	{elseif $pages != ''}
+	 -->
+	{if $pages=="style"}
+	  <meta name="description" content="Tips cantik, fashion, style, gaya terbaru, dan mix and match fashion item agar kamu tetap keren menjalani hari-harimu ">
+	 <title>Cerita Kita | Tips Cantik, Style, Fashion, Gaya Terbaru</title>
+	{/if}
+	{if $pages=="event"}
+	  <meta name="description" content="Event Cerita Kita dan Clean & Clear yang sedan happening. Dapatkan informasi terbarunya disini">
+	 <title>Cerita Kita | Event</title>
+	{/if}
+	{if $pages=="skin"}
+	  <meta name="description" content="Tips merawat muka dan tips ampuh mencegah jerawat datang agar kamu tetap cantik dan kulit lebih sehat">
+	 <title>Cerita Kita | Tips Merawat Muka</title>
+	{/if}
+	{if $pages=="diy"}
+	  <meta name="description" content="Ide-ide yang bisa kamu kreasikan atau Do It Your Self. Bikin barang yang gak kepakai jadi kado unik atau fashion item">
+	 <title>Cerita Kita | DIY Do It Yourself</title>
+	{/if}
+	{if $pages=="relations"}
+	  <meta name="description" content="Masalah cinta, masalah temen, masalah pacar, masalah orang tua atau masalah jomblo? Yuk share disini biar tuntas">
+	 <title>Cerita Kita | Relation dan Percintaan</title>
+	{/if}
+	{if $pages=="quiz"}
+	  <meta name="description" content="Kuis Cerita Kita. Main kuisnya dan temuin serunya yuk disini">
+	 <title>Cerita Kita | Kuis </title>
+	{/if}
+	{if $pages=="home"}
+	
+	  <meta name="description" content="Cerita Kita: Dapatkan tips cantik, tips merawat muka, ruang berbagi tips lainnya dan cerita cewek. Yuk gabung dan berbagi sama kita">
+	 <title>Cerita Kita | Tips Cantik Dan Tips Merawat Muka</title>
+	{/if}
+        {if $pages=="search"}
+          <meta name="description" content="Cerita Kita: Dapatkan tips cantik, tips merawat muka, ruang berbagi tips lainnya dan cerita cewek. Yuk gabung dan berbagi sama kita">
+         <title>Cerita Kita | Search</title>
+        {/if}
+        {if $pages=="register"}
+          <meta name="description" content="Cerita Kita: Dapatkan tips cantik, tips merawat muka, ruang berbagi tips lainnya dan cerita cewek. Yuk gabung dan berbagi sama kita">
+         <title>Cerita Kita | Join Now!</title>
+        {/if}
+        {if $pages=="regalfa"}
+          <meta name="description" content="CERITA KITA, PROMO DISCOUNT 50% CLEAN & CLEAR® FOAMING FACIAL WASH 100 ML">
+         <title>Cerita Kita | Alfamart Cerita Kita, Promo Discount 50%</title>
+        {/if}
+        {if $pages=="about"}
+          <meta name="description" content="Cerita Kita: Dapatkan tips cantik, tips merawat muka, ruang berbagi tips lainnya dan cerita cewek. Yuk gabung dan berbagi sama kita">
+         <title>Cerita Kita | Tips Cantik Dan Tips Merawat Muka</title>
+        {/if}
+        {if $pages=="promo"}
+          <meta name="description" content="CERITA KITA, PROMO DISCOUNT 50% CLEAN & CLEAR® FOAMING FACIAL WASH 100 ML">
+         <title>Cerita Kita | Alfamart Cerita Kita, Promo Discount 50%</title>
+        {/if}
+			
+	{if $pages=="video"}
+	 <meta name="description" content="Cerita Kita: Dapatkan tips cantik, tips merawat muka, ruang berbagi tips lainnya dan cerita cewek. Yuk gabung dan berbagi sama kita"> 
+	
+	 <title>Cerita Kita | Tips Cantik Dan Tips Merawat Muka </title>
+	
+{/if}
+		
+	{else}
+	 <meta name="description" content="Cerita Kita: Dapatkan tips cantik, tips merawat muka, ruang berbagi tips lainnya dan cerita cewek. Yuk gabung dan berbagi sama kita">
+	   
+
+	 <title>Cerita Kita | Tips Cantik Dan Tips Merawat Muka </title>
+	
+{/if}
+    <!--Core CSS -->
+    <link href="{$assets_domain}vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="{$assets_domain}vendor/slicknav/slicknav.css" rel="stylesheet">
+    <link href="{$assets_domain}vendor/flexslider/flexslider.css" rel="stylesheet">
+    <link href="{$assets_domain}vendor/eufont/eufont.css" rel="stylesheet">
+    <link href="{$assets_domain}vendor/jquery.scrollbar/jquery.scrollbar.css" rel="stylesheet">
+	<link href="{$assets_domain}css/popup.css" rel="stylesheet">
+    <link href="{$assets_domain}css/gogirl.css" rel="stylesheet">
+    <link href="{$assets_domain}css/animate.css" rel="stylesheet">
+	<link href="{$assets_domain}css/responsive.css" rel="stylesheet">
+	<script src="{$assets_domain}vendor/jquery.js"></script>
+    <script src="{$assets_domain}vendor/jquery-ui.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+    <script src="{$assets_domain}vendor/bootstrap/js/bootstrap.js"></script>
+	<script src="{$assets_domain}vendor/jquery.validate.js"></script>
+	
+
+	
+	<script type="text/javascript">
+    
+        var basedomain = '{$basedomain}';
+        var pages = '{$pages}';
+    
+    </script>
+    
+
+       {if $pages == 'register' && $act=='thanksreg' || $pages == 'regalfa' && $act=='thxreg' } 
+            {literal}
+			<!-- Facebook Conversion Code for cerita kita -->
+<script>(function() {
+var _fbq = window._fbq || (window._fbq = []);
+if (!_fbq.loaded) {
+var fbds = document.createElement('script');
+fbds.async = true;
+fbds.src = '//connect.facebook.net/en_US/fbds.js';
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(fbds, s);
+_fbq.loaded = true;
+}
+})();
+window._fbq = window._fbq || [];
+window._fbq.push(['track', '6028051225219', {'value':'0.00','currency':'USD'}]);
+</script>
+<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6028051225219&amp;cd[value]=0.00&amp;cd[currency]=USD&amp;noscript=1" /></noscript>
+ 
+            {/literal}
+        {/if}
+	   
+
+{literal}
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','//connect.facebook.net/en_US/fbevents.js');
+ 
+fbq('init', '846530148750400');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=846530148750400&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+<script src="//platform.twitter.com/oct.js" type="text/javascript"></script>
+<script type="text/javascript">twttr.conversion.trackPid('l6iz0', { tw_sale_amount: 0, tw_order_quantity: 0 });</script>
+<noscript>
+<img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=l6iz0&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
+<img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=l6iz0&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
+</noscript>
+{/literal}>>>>>>> .r79

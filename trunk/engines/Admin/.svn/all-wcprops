@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/gogirl-cnc/!svn/ver/2/trunk/engines/Admin
+END
+PluginManager.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/gogirl-cnc/!svn/ver/2/trunk/engines/Admin/PluginManager.php
+END
+UserManager.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/gogirl-cnc/!svn/ver/2/trunk/engines/Admin/UserManager.php
+END
+DashboardManager.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/gogirl-cnc/!svn/ver/2/trunk/engines/Admin/DashboardManager.php
+END
+Admin.php
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/gogirl-cnc/!svn/ver/2/trunk/engines/Admin/Admin.php
+END
+activityTracker.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/gogirl-cnc/!svn/ver/2/trunk/engines/Admin/activityTracker.php
+END

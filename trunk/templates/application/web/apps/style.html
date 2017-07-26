@@ -1,0 +1,111 @@
+
+
+<div class="row">
+	<div class="page-title">
+    	<div class="col-md-4">
+        	<h2>{$modul}</h2>
+        </div>
+    	<div class="col-md-8">
+        	<p class="page-desc">{$contentmodul}</p>
+        </div>
+    </div>
+    <div id="isotope">
+        <div id="galleryList" class="postlist galleryList" dataWidth="500" dataStart="0" dataPage="{$total}">
+		
+			
+        </div>
+		
+    </div><!-- end #isotope -->
+	
+</div><!-- end .row -->
+ <div class="row loaderbox" style="display:none">
+    <div class="preloader"></div>
+	
+</div>
+<script>
+{literal}
+
+var start = 0;
+var count = 20;
+var retrieve_content = function () {
+    if (count <= 0) return;
+    console.log('retrieve');
+    start += count;
+    $.ajax({
+        dataType: 'json',
+          url: 'https://pipes.yahoo.com/pipes/pipe.run?_id=ea940c37d5e8a39daffbfb45865b3d12&_render=json&count=' + count + '&feedurl=http%3A%2F%2Fonlineathens.com%2Fshoutem_week%2Ffeed%2F2&offset=' + start,
+        success: function (data) {
+            var len = data.value.items.length;
+            if (len == 0) count = 0;
+            for (var i = 0; i < len; i++) {
+                $('#galleryList').append(
+
+							  '<div class="wrapper-class">' +
+                    '<ul class="media-list">' +
+                    '<li class="media">' +
+                    '<a class="pull-left" href="' + data.value.items[i].link + '">' +
+                    '<div class="nailthumb-container square-thumb" height="120" width="120">' +
+                    '</div>' +
+                    '</a><div class="media-heading"><a href="' + data.value.items[i].link + '">' +
+                    '<h5 class="headline">' + data.value.items[i].title + '</h5></a></div></li></ul></div>');
+
+               );
+            }
+        }
+    });
+};
+
+$(window).scroll(function () {
+    if ($(window).scrollTop() === $(document).height() - $(window).height()) {
+        retrieve_content();
+    }
+});
+
+retrieve_content();
+
+
+
+
+$(document).ready(function(){
+			$(document).on("click",".like-count", function(){
+			console.log('masuk');
+			var likenya=$(this).attr('likeidnya');
+			var thiss=$(this);
+			$.ajax({
+                        'type': 'POST',
+                        'url': basedomain+'likemodul',
+                        'data': {like:likenya},
+						'dataType':'json',
+                        'success': function(result){
+							if(result.status==true){
+								thiss.children().next().html(result.total);
+							
+							}
+						
+						}
+						
+						})
+				});
+});
+
+		
+function shareFB(fb_name,fb_link,fb_img,fb_user,fb_post){
+			$("#bg-popup").fadeOut();
+			$(".popup,.popup2").fadeOut();
+			FB.init();
+			FB.ui({
+				method: 'feed',
+				name: fb_name,
+				link: fb_link,
+				picture: fb_img,
+				caption: fb_user,
+				description: fb_post
+				
+				
+			});
+				 
+		}
+		
+	
+{/literal}
+</script>

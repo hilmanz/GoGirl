@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+{$meta}
+<body>
+  <div id="body">
+    <div id="page">
+      {if $pages != 'login' && $pages != 'logout'}
+      <div id="sidebar">
+        <div id="navbar">
+            <ul>
+				<li><a class="{if $pages == 'home'}active{/if}" href="{$basedomain}home" ><span class="icon-home">&nbsp;</span><span>Home</span></a></li>
+				<li><a class="{if $pages == 'banner'}active{/if}" href="{$basedomain}banner" ><span class="icon-users">&nbsp;</span><span>Banner</span></a></li>	
+				<li><a class="{if $pages == 'register'}active{/if}" href="{$basedomain}register" ><span class="icon-users">&nbsp;</span><span>List Registrasi User </span></a></li>				
+                <li><a class="{if $pages == 'story'}active{/if}" href="{$basedomain}story" ><span class="icon-file">&nbsp;</span><span>Story Article</span></a></li>		
+                <li><a class="{if $pages == 'register'}comment{/if}" href="{$basedomain}comment" ><span class="icon-bubble">&nbsp;</span><span>Comment </span></a></li>						
+			
+				<li><a class="{if $pages == 'register'}registeralfa{/if}" href="{$basedomain}registeralfa" ><span class="icon-list">&nbsp;</span><span>List User Alfa </span></a></li>	
+				<li><a class="{if $pages == 'register'}quiz{/if}" href="{$basedomain}quiz" ><span class="icon-list">&nbsp;</span><span>Quiz</span></a></li>					
+                <li><a class="{if $pages == 'register'}logout{/if}" href="{$basedomain}logout.php" ><span class="icon-lock">&nbsp;</span><span>Logout </span></a></li>		
+              </ul>
+          </div>
+      </div><!-- end #sidebar -->
+		  {$header}
+      {/if}
+        <div id="thecontent">
+             {$mainContent}
+        </div><!-- /#thecontent -->
+		  {$footer}
+		  
+
+    </div><!-- end #page -->
+  </div><!-- end #body -->    
+</body>
+</html>

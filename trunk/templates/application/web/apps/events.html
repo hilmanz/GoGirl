@@ -1,0 +1,200 @@
+
+
+<div class="row">
+
+	<div class="page-title">
+
+    	<div class="col-md-4">
+
+        	<h2>{$modul}</h2>
+
+        </div>
+
+    	<div class="col-md-8">
+
+        	<p class="page-desc">{$contentmodul}</p>
+
+        </div>
+
+    </div>
+
+    <div id="isotope">
+
+       <div class="postlist galleryList" dataWidth="500" dataStart="0" dataPage="{$total}">
+
+		
+
+		{section name=i loop=$listcontent}
+
+            <figure class="item col-md-4 wow fadeIn">
+
+                <figcaption>
+
+				{if $listcontent[i].img}
+
+                	<a class="thumb thumb-medium" href="{$basedomain}event/detail/{$listcontent[i].id}/{$listcontent[i].titleurl}">
+
+                    	 <img src="{$base_domain}public_assets/imgregistrasi/{$listcontent[i].img}"/>
+
+                    </a>
+
+				{/if}
+
+                    <h4><a href="{$basedomain}event/detail/{$listcontent[i].id}/{$listcontent[i].titleurl}">{$listcontent[i].title}</a></h4>
+
+                    <div class="meta-container">
+
+						{if $listcontent[i].avatar}
+
+                        <a href="{$basedomain}event/detail/{$listcontent[i].id}/{$listcontent[i].titleurl}">
+
+                            <div class="thumb thumb-small">
+
+                                <img src="{$base_domain}public_assets/avatar/{$listcontent[i].avatar}"/>
+
+                            </div>
+
+                        </a>
+
+						{/if}
+
+                        <p class="meta-post">
+
+                            <span class="author">By {$listcontent[i].name}</span> |  
+
+                            <span class="post-dates">{$listcontent[i].date|date_format:"%A, %B %e, %Y"}</span>
+
+                        </p>
+
+                        <p class="social-post">
+
+                            <a class="like-count likecategory" href='#' likeidnya='{$listcontent[i].id}' ><i class="icon-heart-o"></i> <span>{$listcontent[i].like}</span> Likes</a>
+
+								
+
+								  <a class="fb-share" href="javascript:void(0)"  likeidnya='{$listcontent[i].id}' onclick="shareFB('{$listcontent[i].titleshare}','{$basedomain}event/detail/{$listcontent[i].id}/{$listcontent[i].titleurl}','{$basedomain}public_assets/imgregistrasi/{$listcontent[i].img}','','{$listcontent[i].contentisifb|truncate:150:'...':true}')"><i class="icon-facebook">&nbsp;</i></a> 
+
+			
+
+								<a class="twitter-share" likeidnya='{$listcontent[i].id}' href="http://twitter.com/share?text={$listcontent[i].contentisitwitter|truncate:40:'...':true}&url={$basedomain}event/detail/{$listcontent[i].id}/{$listcontent[i].titleurl}"  target="_blank"><i class="icon-twitter">&nbsp;</i></a>
+
+                          
+
+                        </p>
+
+                    </div>
+
+                    <div class="entry-post">
+
+                    	<p>{$listcontent[i].content|truncate:120:"..."}</p>
+
+                        <a href="{$basedomain}event/detail/{$listcontent[i].id}/{$listcontent[i].titleurl}" class="readmore">Read More <i class="icon-arrow-right"></i></a>
+
+                    </div>
+
+                </figcaption>
+
+            </figure>
+
+          {/section}
+
+           
+
+        </div>
+
+    </div><!-- end #isotope -->
+
+</div><!-- end .row -->
+
+<div class="row loaderbox" style="display:none">
+
+    <div class="preloader"></div>
+
+</div><!-- end .row -->
+
+
+
+<script>
+
+{literal}
+
+$(document).ready(function(){
+
+			$(document).on("click",".like-count", function(){
+
+			console.log('masuk');
+
+			var likenya=$(this).attr('likeidnya');
+
+			var thiss=$(this);
+
+			$.ajax({
+
+                        'type': 'POST',
+
+                        'url': basedomain+'likemodul',
+
+                        'data': {like:likenya},
+
+						'dataType':'json',
+
+                        'success': function(result){
+
+							if(result.status==true){
+
+								thiss.children().next().html(result.total);
+
+							
+
+							}
+
+						
+
+						}
+
+						
+
+						})
+
+				});
+
+});
+
+		
+
+function shareFB(fb_name,fb_link,fb_img,fb_user,fb_post){
+
+			$("#bg-popup").fadeOut();
+
+			$(".popup,.popup2").fadeOut();
+
+			FB.init();
+
+			FB.ui({
+
+				method: 'feed',
+
+				name: fb_name,
+
+				link: fb_link,
+
+				picture: fb_img,
+
+				caption: fb_user,
+
+				description: fb_post
+
+				
+
+				
+
+			});
+
+				 
+
+		}
+
+{/literal}
+
+</script>
+

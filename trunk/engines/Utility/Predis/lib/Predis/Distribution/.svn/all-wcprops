@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/gogirl-cnc/!svn/ver/2/trunk/engines/Utility/Predis/lib/Predis/Distribution
+END
+IDistributionStrategy.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/gogirl-cnc/!svn/ver/2/trunk/engines/Utility/Predis/lib/Predis/Distribution/IDistributionStrategy.php
+END
+EmptyRingException.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/gogirl-cnc/!svn/ver/2/trunk/engines/Utility/Predis/lib/Predis/Distribution/EmptyRingException.php
+END
+INodeKeyGenerator.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/gogirl-cnc/!svn/ver/2/trunk/engines/Utility/Predis/lib/Predis/Distribution/INodeKeyGenerator.php
+END
+KetamaPureRing.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/gogirl-cnc/!svn/ver/2/trunk/engines/Utility/Predis/lib/Predis/Distribution/KetamaPureRing.php
+END
+HashRing.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/gogirl-cnc/!svn/ver/2/trunk/engines/Utility/Predis/lib/Predis/Distribution/HashRing.php
+END

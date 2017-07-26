@@ -1,0 +1,163 @@
+<script>
+{literal}
+function paging_ajax_banner(fungsi,start){ 
+				
+	$.post(basedomain+"banner/pagingbanner",{start:start,ajax:1},function(response){
+	
+		if(response){
+			  if(response.status==true){
+				var str="";
+				$.each(response.data,function(k,v){
+					
+						str+='<tr>';
+						str+='<td>'+v.no+'</td>';
+						str+='<td>'+v.images+'</td>';
+						str+='<td>'+v.link+'</td>';
+						str+='<td>'+v.date+'</td>';
+						str+='<td><a href="{$basedomain}banner/editbanner?param={$list[i].id}" class="button"><span class="icon-pencil">&nbsp;</span> Edit</a>';
+						str+='<a href="javascript:void(0)" class="button" onClick="confirmation(\''+basedomain+'banner/hapus?param='+v.id+'\',\'Confirm to Delete?\')" > Delete</a>';
+						str+='</td>';
+						str+='<td>';
+						if (v.n_status==1)
+						{
+						str+='<input type="checkbox" class="checkinactive" value="'+v.id+'" checked>Checked';
+						}else{
+						str+='<center><input type="checkbox" class="checkactive" value="'+v.id+'"></center>';
+						}
+						str+='</td>';
+						
+						str+='</tr>';
+						
+						});
+						
+						$('.pagilist').html(str);
+						likeunlike();	
+					
+				}
+			}
+		},"JSON");
+	}
+	
+{/literal}
+	</script>
+	
+<div class="page_section" id="project-page">
+    <div id="container">
+        <div class="titlebox">
+            <h2 class="fl"><span class="icon-users">&nbsp;</span>List Banner</h2>
+             <h2 class="fr"><a href="{$basedomain}banner/addbanner" class="button2">Add New</a></h2>
+        </div><!-- end .titlebox -->
+        <div class="content">
+        	<div class="summary">
+       		
+            </div><!-- end .summary -->
+			<table cellpadding="0" cellspacing="0" border="0" width="100%">
+			<thead>
+				<tr>
+					<th class="head0">No</th>
+					<th class="head0">images</th> 
+					<th class="head0">link</th> 
+					<th class="head0">Date</th> 
+					<th class="head0">Action</th> 
+					<th class="head0">Status</th> 
+				</tr>
+			</thead>
+			<tbody class="pagilist">
+			{section name=i loop=$list}
+			<tr>
+			<td>{$list[i].no}</td>
+			<td>{$list[i].images}</td>
+			<td>{$list[i].link}</td>
+			<td>{$list[i].date}</td>
+			<td><a href="{$basedomain}banner/editbanner?param={$list[i].id}" class="button"><span class="icon-pencil">&nbsp;</span> Edit</a>
+			
+			<a href="javascript:void(0)" class="button" onClick="confirmation('{$basedomain}banner/hapus?param={$list[i].id}','Confirm to Delete?')" ><span class="icon-trash">&nbsp;</span> Delete</a></td>
+			
+			<td>{if $list[i].n_status==1}<input type="checkbox" class="checkinactive" value="{$list[i].id}" checked>Checked{else}<center><input type="checkbox" class="checkactive" value="{$list[i].id}"></center>{/if}</td>
+			
+			</tr>
+			{/section}	
+			</tbody>
+			</table>
+            <div id="paging_of_banner_list" class="paging">
+            
+            </div>
+        </div><!-- end .content -->
+    </div><!-- end #container -->
+</div><!-- end #home -->
+
+<script type="text/javascript">
+	getpaging(0,{$total},"paging_of_banner_list","paging_ajax_banner",10);
+</script>
+
+
+<script>
+{literal}
+likeunlike();
+
+function likeunlike(){
+
+$(document).ready(function(){
+			$(".checkactive").on("click", function(){
+			var idnya=$(this).val();
+			var thisnya=$(this);
+					  $.ajax({
+                        'type': 'POST',
+                        'url': basedomain+'banner/checkit',
+                        'data': {idnya:idnya},
+						'dataType':'json',
+                        'success': function(result){
+						
+							thisnya.hide();
+							thisnya.parent().html('<center><input type="checkbox" class="checkinactives" value='+idnya+' checked>Checked</center>');
+							
+							$(document).ready(function(){
+							$(".checkinactives").on("click", function(){
+							var idnya=$(this).val();
+							var thisnya=$(this);
+									  $.ajax({
+										'type': 'POST',
+										'url': basedomain+'banner/incheckit',
+										'data': {idnya:idnya},
+										'dataType':'json',
+										'success': function(result){
+										
+											thisnya.hide();
+											thisnya.parent().html('<center><input type="checkbox" class="checkactive" value='+idnya+'></center>');
+											likeunlike();
+										}
+										
+										});
+
+								});
+							});
+						}
+						
+						});
+
+				});
+			});
+			
+$(document).ready(function(){
+			$(".checkinactive").on("click", function(){
+			var idnya=$(this).val();
+			var thisnya=$(this);
+					  $.ajax({
+                        'type': 'POST',
+                        'url': basedomain+'banner/incheckit',
+                        'data': {idnya:idnya},
+						'dataType':'json',
+                        'success': function(result){
+						
+							thisnya.hide();
+							thisnya.parent().html('<center><input type="checkbox" class="checkactive" value="'+idnya+'"></center>');
+							likeunlike();
+						}
+						
+						});
+
+				});
+			});
+}
+{/literal}
+</script>

@@ -1,0 +1,245 @@
+<div class="container">
+    <div class="theTitle">
+        <h2 class="fl">Account</h2>
+    </div><!-- END .theTitle -->
+   
+    
+    <div class="section">
+        <div class="box" style="margin:20px 0;">
+        	<div class="theTitle">
+                <h3>Account Settings &amp; Usage</h3>
+                <p>Review your account status, usage and running keywords. Usage data is updated daily.</p>
+            </div>
+            <div class="accountBox">
+                <div class="accountInfo" data-step="55" data-intro="Nullam quis risus eget urna mollis ornare vel eu leo. Sed posuere consectetur est at lobortis." data-position='right'>
+                    <table width="400" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td width="180"><span>Account Type:</span></td>
+                        <td><span id="acctype" class="green">{$account_detail.account_type}</span></td>
+                      </tr>
+                      <tr>
+                        <td><span>Language:</span></td>
+                        <td><span class="grey">{$account_detail.lang}</span></td>
+                      </tr>
+                      <tr>
+                        <td><span>Location:</span></td>
+                        <td><span class="grey">{$account_detail.location}</span></td>
+                      </tr>
+                      <tr>
+                        <td><span>Activation Date:</span></td>
+                        <td><span class="grey">{$account_detail.activation_date}</span></td>
+                      </tr>
+                      <tr>
+                        <td><span>Valid Until:</span></td>
+                        <td><span class="blue">{$account_detail.expired_date}</span></td>
+                      </tr>
+                      <tr>
+                        <td><span>Account Status:</span></td>
+                        <td><span id="accstatus" class="green">{$account_detail.account_status}</span></td>
+                      </tr>
+                      <tr>
+                        <td><span>Email:</span></td>
+                        <td><span class="grey">{$account_detail.email}</span></td>
+                      </tr>
+                      <tr>
+                        <td><span>Last Login:</span></td>
+                        <td><span class="grey">{$account_detail.last_login}</span></td>
+                      </tr>
+                      <tr>
+                        <td><span>Company/Organization:</span></td>
+                        <td><span class="grey">{$account_detail.organization}</span></td>
+                      </tr>
+                    </table>
+                </div><!-- END .accountInfo -->
+                <div class="accountUsage" data-step="56" data-intro="Nullam quis risus eget urna mollis ornare vel eu leo. Sed posuere consectetur est at lobortis." data-position='left'>
+                   
+                	<h4>Your Account Usage</h4>
+                    <div class="row">
+                    	<label class="fl">Keyword Limit</label>
+                        <label class="fr"><span id="kl">0/0</span><span id="klp"></span></label>
+                        <div id="KeywordLimit"></div>
+                    </div>
+                    <div class="row">
+                        <label class="fr"><span id="pl">0/0</span><span id="plp"></span></label>
+                    	<label class="fl">Posts Limit</label>
+                        <div id="PostsLimit"></div>
+                    </div>
+                    <div class="row">
+                        <label class="fr"><span id="ul">0/0</span><span id="ulp"></span></label>
+                    	<label class="fl">Users Limit</label>
+                        <div id="UsersLimit"></div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- END .box -->
+		
+        <div class="box">
+            <div class="section" data-step="57" data-intro="Nullam quis risus eget urna mollis ornare vel eu leo. Sed posuere consectetur est at lobortis." data-position='top'>
+                    <div class="box-title">
+                        <h3 class="fl">Topics & Keywords</h3>
+                    </div>
+                    <table id="topicNkeyword" class="display data_table2" >
+                        <thead>
+                           
+                        </thead>
+                        <tbody>
+                            
+                        </tbody>
+                    </table>
+                    {*}
+                    <div class="paging">
+                        <div class="dataTables_info fl">Showing 1 to 5 of 5 entries</div>
+                        <div class="dataTables_paginate paging_two_button fr">
+                            <a class="paginate_disabled_previous">Previous</a>
+                            <a class="paginate_enabled_next">Next</a>
+                        </div>
+                    </div>
+                    {/*}
+            </div><!-- END .section -->
+        </div><!-- END .box -->
+		
+    </div><!-- END .section -->
+	 <div class="section">
+        <div class="box mb20" data-step="58" data-intro="Nullam quis risus eget urna mollis ornare vel eu leo. Sed posuere consectetur est at lobortis." data-position='top'>
+        	<div class="theTitle">
+                <h3>{$user_detail->name} {$user_detail->last_name}</h3>
+                <p>Update contact details & change your password here</p>
+            </div>
+            <div class="accountBox">
+			<div class="red"> {$message}</div>
+                <div class="accounSetting">
+                	<form class="theForm" method="post">
+                    
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td colspan="2"><h4>Create Alert</h4></td>
+                      </tr>
+                      <tr>
+                        <td width="180"><span>Alert Name</span></td>
+                        <td><div class="relative"><input type="text" name="name" value="{$AlertName}" maxlength="150" /><span class="swtip"><a class="circlebtn" title="Give your alert a friendly name">?</a></span></div></td>
+                      </tr>
+                      <tr>
+                        <td><span>Keywords</span></td>
+                        <td><div class="relative"><input type="text" name="keyword" value="{$keyword}" class="keywords"/><span class="swtip"><a class="circlebtn" title="The words or phrases that will trigger any alert. Use commas to enter multiple words">?</a></span></div></td>
+                      </tr>
+                      <tr>
+                        <td style="vertical-align:middle;"><span>Sentiment</span></td>
+						<td> 
+                        	<div class="relative">
+                                <div class="select-css" style="display:inline-block;">
+                                    <select class="styled sentimentSelect" name="sentiment">
+                                        <option value="0"  {if $sentiment==0 } select="selected" {/if}>Neutral </option>
+                                        <option value="1"  {if $sentiment==1 } select="selected" {/if}>Negative </option>
+                                        <option value="2"  {if $sentiment==2 } select="selected" {/if}>Positive </option>
+                                    </select>
+                                </div>
+                            <span class="swtip"><a class="circlebtn" title="The sentiment of the post that will trigger the alter. To ignore sentiment, please select 'ALL'">?</a></span>
+                            </div>
+						</td>
+                      </tr>
+                      <tr>
+                        <td width="180"><span>Interaction Count</span></td>
+                        <td> 
+							<div class="relative">
+								<input type="text" name="interaction" value="{$interaction}"  class="interaction" style="width:80px;" />
+								<span class="swtip"><a class="circlebtn" title="Set the minimum interaction count which triggers the alert. Leave empty to ignore">?</a></span>
+							</div>
+						</td>
+                      </tr>
+                       <tr>
+                        <td width="180"><span>Topic </span></td>
+                        <td>
+							<div class="relative">
+                                <div style="display:inline-block;">
+                                    {foreach from=$camping key=k item=v}
+                                        <span style="margin:0 10px 0 0;">
+                                         <input type="checkbox" name="campaing[]"  value="{$v.id}">
+                                         <label for="checked{$v.id}">{$v.name|capitalize}</label>
+                                        </span>
+                                    {/foreach}
+                                    <label class="red "></label>
+                                </div>
+                                <span class="swtip"><a class="circlebtn" title="Select the topic for your alert">?</a></span>
+							</div>
+						</td>
+                      </tr>
+					   <tr>
+                        <td width="180"><span>Send Email </span></td>
+                        <td>
+							<div class="relative">
+								<select class="styled sendmailSelect" name="sendmail">
+									<option value="0" selected >No </option>
+									<option value="1"  >Yes </option>
+									
+								</select>
+                            	<span class="swtip"><a class="circlebtn" title="Send alerts to a registered email address">?</a></span>
+							</div>
+						</td>
+                      </tr>
+					  <tr class="emailaktive">
+                        <td width="180"><span>Time </span></td>
+                        <td>
+							<div class="relative">
+                                <div style="display:inline-block;">
+                                    <input type="checkbox" class="timealert" name="time[]"  value="{$v.id}">
+                                         <label for="checked{$v.id}">09:00</label>
+                                         <input type="checkbox" class="timealert" name="time[]"  value="{$v.id}">
+                                         <label for="checked{$v.id}">13:00</label>
+                                         <input type="checkbox"class="timealert" name="time[]"  value="{$v.id}">
+                                         <label for="checked{$v.id}">17:00</label>
+                                </div>
+                                <span class="swtip"><a class="circlebtn" title="Select what time this alert is sent, you can select up to 3 times a day">?</a></span>
+							</div>
+						</td>
+                      </tr> 
+					  <tr class="emailaktive">
+                        <td width="180"><span>Email </span></td>
+                        <td>
+							<div class="relative">
+                                <input type="text" name="email" value="{$user_detail->email}"  class="email"/>
+                                <span class="swtip"><a class="circlebtn" title="The email address(s) alerts will be sent to. The send to multiple addresses please use commas">?</a></span>
+							</div>
+						</td>
+                      </tr> 
+                      <tr>
+                        <td colspan="2">
+						<input type="hidden" name="add" value="add" />
+						<input type="submit" class="button3" value="SAVE" />
+						</td>
+                      </tr>
+                    </table>
+                    </form>
+                </div><!-- END .accountInfo -->
+            </div>
+        </div><!-- END .box -->
+    </div><!-- END .section -->
+	  <div class="box">
+            <div class="section" data-step="59" data-intro="Nullam quis risus eget urna mollis ornare vel eu leo. Sed posuere consectetur est at lobortis." data-position='top'>
+                    <div class="box-title">
+                        <h3 class="fl">Alert Keywords</h3>
+                    </div>
+                    <table id="Alertkeyword" class="display data_table2" >
+                        <thead>
+                           
+                        </thead>
+                        <tbody>
+                            
+                        </tbody>
+                    </table>
+                    {*}
+                    <div class="paging">
+                        <div class="dataTables_info fl">Showing 1 to 5 of 5 entries</div>
+                        <div class="dataTables_paginate paging_two_button fr">
+                            <a class="paginate_disabled_previous">Previous</a>
+                            <a class="paginate_enabled_next">Next</a>
+                        </div>
+                    </div>
+                    {/*}
+            </div><!-- END .section -->
+        </div><!-- END .box -->
+   
+   
+   
+	
+	
+</div><!-- END .container -->

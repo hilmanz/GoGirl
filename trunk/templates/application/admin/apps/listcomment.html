@@ -1,0 +1,188 @@
+<script>
+{literal}
+function paging_ajax_comment(fungsi,start){ 
+				
+	$.post(basedomain+"comment/pagingcomment",{start:start,ajax:1},function(response){
+	
+		if(response){
+			  if(response.status==true){
+				var str="";
+				$.each(response.data,function(k,v){
+					
+						str+='<tr>';
+						str+='<td>'+v.no+'</td>';
+						str+='<td>'+v.name+'</td>';
+						str+='<td>'+v.email+'</td>';
+						str+='<td>'+v.comment.substring(0, 150)+'..</td>';
+						str+='<td>';
+						if(v.id_cerita==1)
+						{
+						str+='Style';
+						}else if(v.id_cerita==2){
+						str+='Event';
+						}else if(v.id_cerita==3){
+						str+='Skin';
+						}else if(v.id_cerita==4){
+						str+='D.I.Y';
+						}else if(v.id_cerita==5){
+						str+='Relations';
+						}
+						str+='</td>';
+						str+='<td>';
+						if (v.n_status==1)
+						{
+						str+='<center><input type="checkbox" class="checkinactive" value="'+v.id+'" checked>Tampil</center>';
+						}else{
+						str+='<center><input type="checkbox" class="checkactive" value="'+v.id+'"></center>';
+						}
+						str+='</td>';
+						str+='<td><a href="javascript:void(0)" class="button" onClick="confirmation(\''+basedomain+'comment/hapus?param='+v.id+'\',\'Confirm to Delete?\')" > Delete</a>';
+						
+						str+='</tr>';
+						
+						});
+						
+						$('.pagilist').html(str);
+						likeunlike();	
+					
+				}
+			}
+		},"JSON");
+	}
+	
+{/literal}
+	</script>
+
+<div class="page_section" id="project-page">
+    <div id="container">
+        <div class="titlebox">
+            <h2 class="fl"><span class="icon-users">&nbsp;</span> Comment Article</h2>
+              
+        </div><!-- end .titlebox -->
+        <div class="content">
+        	<div class="summary">
+       		
+            </div><!-- end .summary -->
+			<table cellpadding="0" cellspacing="0" border="0" width="100%">
+			<thead>
+				<tr>
+					<th class="head0">No</th>
+					<th class="head0">Name</th> 
+					<th class="head0">Email</th> 
+					<th class="head0" width="30%">Comment</th> 
+					<th class="head0">Segment</th> 
+					<th class="head0">Status</th>
+					<th class="head0">Action</th>
+				</tr>
+			</thead>
+			<tbody class="pagilist">
+			{section name=i loop=$list}
+			<tr>
+			<td>{$list[i].no}</td>
+			<td>{$list[i].name}</td>
+			<td>{$list[i].email}</td>
+			
+			<td>{$list[i].comment|truncate:150:'...':true}</td>
+			<td>{if $list[i].id_cerita==1}
+			Style
+			{elseif $list[i].id_cerita==2}
+			Event
+			{elseif $list[i].id_cerita==3}
+			Skin
+			{elseif $list[i].id_cerita==4}
+			D.I.Y
+			{elseif $list[i].id_cerita==5}
+			Relations
+			{/if}
+			
+			<td>{if $list[i].n_status==1}<center><input type="checkbox" class="checkinactive" value="{$list[i].id}" checked>Tampil</center>{else}<center><input type="checkbox" class="checkactive" value="{$list[i].id}"></center>{/if}</td>
+			<td>
+			<a href="javascript:void(0)" class="button" onClick="confirmation('{$basedomain}comment/hapus?param={$list[i].id}','Confirm to Delete?')" > Delete</a></td>
+			</td>
+		
+			</tr>
+			{/section}	
+			</tbody>
+			</table>
+            <div id="paging_of_career_list" class="paging">
+             
+            </div>
+        </div><!-- end .content -->
+    </div><!-- end #container -->
+</div><!-- end #home -->
+
+<script type="text/javascript">
+	getpaging(0,{$total},"paging_of_career_list","paging_ajax_comment",10);
+</script>
+
+<script>
+{literal}
+likeunlike();
+
+function likeunlike(){
+
+$(document).ready(function(){
+			$(".checkactive").on("click", function(){
+			var idnya=$(this).val();
+			var thisnya=$(this);
+					  $.ajax({
+                        'type': 'POST',
+                        'url': basedomain+'comment/checkit',
+                        'data': {idnya:idnya},
+						'dataType':'json',
+                        'success': function(result){
+						
+							thisnya.hide();
+							thisnya.parent().html('<center><input type="checkbox" class="checkinactives" value='+idnya+' checked>Tampil</center>');
+							
+							$(document).ready(function(){
+							$(".checkinactives").on("click", function(){
+							var idnya=$(this).val();
+							var thisnya=$(this);
+									  $.ajax({
+										'type': 'POST',
+										'url': basedomain+'story/incheckit',
+										'data': {idnya:idnya},
+										'dataType':'json',
+										'success': function(result){
+										
+											thisnya.hide();
+											thisnya.parent().html('<center><input type="checkbox" class="checkactive" value='+idnya+'></center>');
+											likeunlike();
+										}
+										
+										});
+
+								});
+							});
+						}
+						
+						});
+
+				});
+			});
+			
+$(document).ready(function(){
+			$(".checkinactive").on("click", function(){
+			var idnya=$(this).val();
+			var thisnya=$(this);
+					  $.ajax({
+                        'type': 'POST',
+                        'url': basedomain+'comment/incheckit',
+                        'data': {idnya:idnya},
+						'dataType':'json',
+                        'success': function(result){
+						
+							thisnya.hide();
+							thisnya.parent().html('<center><input type="checkbox" class="checkactive" value="'+idnya+'"></center>');
+							likeunlike();
+						}
+						
+						});
+
+				});
+			});
+}
+{/literal}
+</script>
+

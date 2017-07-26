@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/gogirl-cnc/!svn/ver/59/trunk/com/admin/modules
+END
+settings.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/gogirl-cnc/!svn/ver/2/trunk/com/admin/modules/settings.php
+END
+moderation.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/gogirl-cnc/!svn/ver/2/trunk/com/admin/modules/moderation.php
+END
+comment.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/gogirl-cnc/!svn/ver/44/trunk/com/admin/modules/comment.php
+END
+banner.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/gogirl-cnc/!svn/ver/39/trunk/com/admin/modules/banner.php
+END
+project.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/gogirl-cnc/!svn/ver/2/trunk/com/admin/modules/project.php
+END
+registeralfa.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/gogirl-cnc/!svn/ver/39/trunk/com/admin/modules/registeralfa.php
+END
+login.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/gogirl-cnc/!svn/ver/30/trunk/com/admin/modules/login.php
+END
+changepassword.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/gogirl-cnc/!svn/ver/2/trunk/com/admin/modules/changepassword.php
+END
+listuser.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/gogirl-cnc/!svn/ver/2/trunk/com/admin/modules/listuser.php
+END
+story.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/gogirl-cnc/!svn/ver/56/trunk/com/admin/modules/story.php
+END
+administrator.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/gogirl-cnc/!svn/ver/2/trunk/com/admin/modules/administrator.php
+END
+event.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/gogirl-cnc/!svn/ver/2/trunk/com/admin/modules/event.php
+END
+register.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/gogirl-cnc/!svn/ver/39/trunk/com/admin/modules/register.php
+END
+quiz.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/gogirl-cnc/!svn/ver/59/trunk/com/admin/modules/quiz.php
+END
+home.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/gogirl-cnc/!svn/ver/30/trunk/com/admin/modules/home.php
+END

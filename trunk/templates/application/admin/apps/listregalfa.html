@@ -1,0 +1,41 @@
+<div class="page_section" id="project-page">
+    <div id="container">
+        <div class="titlebox">
+            <h2 class="fl"><span class="icon-users">&nbsp;</span> List Registrasi User </h2>
+             
+        </div><!-- end .titlebox -->
+        <div class="content">
+        	<div class="summary">
+       		
+            </div><!-- end .summary -->
+			<table cellpadding="0" cellspacing="0" border="0" width="100%">
+			<thead>
+				<tr>
+					<th class="head0">No</th>
+					<th class="head0">Nama</th> 
+					<th class="head0">Umur</th> 
+					<th class="head0">No HP</th> 
+				</tr>
+			</thead>
+			<tbody class="pagilist">
+			{section name=i loop=$list}
+			<tr>
+			<td>{$list[i].no}</td>
+			<td>{$list[i].nama}</td>
+			<td>{$list[i].umur} thn</td>
+			<td>{$list[i].telp}</td>
+			
+			</tr>
+			{/section}	
+			</tbody>
+			</table>
+            <div id="paging_of_career_list" class="paging">
+              
+            </div>
+        </div><!-- end .content -->
+    </div><!-- end #container -->
+</div><!-- end #home -->
+
+<script type="text/javascript">
+	getpaging(0,{$total},"paging_of_career_list","paging_ajax_career",10);
+</script>

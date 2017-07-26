@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/gogirl-cnc/!svn/ver/2/trunk/tools/cron
+END
+curl_class.php
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/gogirl-cnc/!svn/ver/2/trunk/tools/cron/curl_class.php
+END
+user_unblock.sh
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/gogirl-cnc/!svn/ver/2/trunk/tools/cron/user_unblock.sh
+END
+db.php
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/gogirl-cnc/!svn/ver/2/trunk/tools/cron/db.php
+END
+mopsync.php
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/gogirl-cnc/!svn/ver/2/trunk/tools/cron/mopsync.php
+END

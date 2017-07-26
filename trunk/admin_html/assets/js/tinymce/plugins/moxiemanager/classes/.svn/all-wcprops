@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/gogirl-cnc/!svn/ver/30/trunk/admin_html/assets/js/tinymce/plugins/moxiemanager/classes
+END
+PluginManager.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/gogirl-cnc/!svn/ver/30/trunk/admin_html/assets/js/tinymce/plugins/moxiemanager/classes/PluginManager.php
+END
+CommandCollection.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/gogirl-cnc/!svn/ver/30/trunk/admin_html/assets/js/tinymce/plugins/moxiemanager/classes/CommandCollection.php
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/gogirl-cnc/!svn/ver/30/trunk/admin_html/assets/js/tinymce/plugins/moxiemanager/classes/Exception.php
+END
+MOXMAN.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/gogirl-cnc/!svn/ver/30/trunk/admin_html/assets/js/tinymce/plugins/moxiemanager/classes/MOXMAN.php
+END
+AutoLoader.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/gogirl-cnc/!svn/ver/30/trunk/admin_html/assets/js/tinymce/plugins/moxiemanager/classes/AutoLoader.php
+END
+ICommandHandler.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/gogirl-cnc/!svn/ver/30/trunk/admin_html/assets/js/tinymce/plugins/moxiemanager/classes/ICommandHandler.php
+END
+IPlugin.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/gogirl-cnc/!svn/ver/30/trunk/admin_html/assets/js/tinymce/plugins/moxiemanager/classes/IPlugin.php
+END
+ICommand.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/gogirl-cnc/!svn/ver/30/trunk/admin_html/assets/js/tinymce/plugins/moxiemanager/classes/ICommand.php
+END

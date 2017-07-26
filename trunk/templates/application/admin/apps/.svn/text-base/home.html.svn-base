@@ -1,0 +1,40 @@
+<!-- ki -->
+<div class="page_section" id="project-page">
+    <div id="container">	
+        <div class="titlebox">
+            <h2 class="fl"><span class="icon-books">&nbsp;</span> Homepage - About Go Girl</h2>
+        
+        </div><!-- end .titlebox -->
+        <div class="content">
+            <div class="summary">
+           
+            </div><!-- end .summary -->
+
+            <form id="forms" class="forms" method="post" action="">
+            <div id="new-project" class="boxcontent">
+              <h3>Cerita-kita.co.id </h3>
+			  
+			
+adalah ruang buat ketemu sesama remaja dan cerita tentang dunia kita. Kita bisa share info, tips dan saling menginspirasi juga nih lewat tulisan yang kita submit ke cerita-kita.co.id. Mulai dari soal style, skin problems sampe urusan sama pacar atau sahabat, bisa kita temuin jawabannya di sini!
+
+
+<br>
+<br>
+
+            </div><!-- end #wizard -->
+            <div class="regInfo">
+            	<div class="col2">
+                    <div class="boxcontent">
+                        <span class="bluecol">Total Registration User :</span><span> {$totalreg}</span>
+                    </div>
+                </div>
+            	<div class="col2">
+                    <div class="boxcontent">
+                        <span class="pinkcol">Total Registration Alfa :</span><span> {$totalregalfa}</span>
+                    </div>
+                </div>
+            </div>
+            </form>
+        </div><!-- end .content -->
+    </div><!-- end #container -->
+</div><!-- end #home -->

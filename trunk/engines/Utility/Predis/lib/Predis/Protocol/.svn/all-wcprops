@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/gogirl-cnc/!svn/ver/2/trunk/engines/Utility/Predis/lib/Predis/Protocol
+END
+IProtocolProcessor.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/gogirl-cnc/!svn/ver/2/trunk/engines/Utility/Predis/lib/Predis/Protocol/IProtocolProcessor.php
+END
+IResponseReader.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/gogirl-cnc/!svn/ver/2/trunk/engines/Utility/Predis/lib/Predis/Protocol/IResponseReader.php
+END
+IComposableProtocolProcessor.php
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/gogirl-cnc/!svn/ver/2/trunk/engines/Utility/Predis/lib/Predis/Protocol/IComposableProtocolProcessor.php
+END
+ProtocolException.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/gogirl-cnc/!svn/ver/2/trunk/engines/Utility/Predis/lib/Predis/Protocol/ProtocolException.php
+END
+ICommandSerializer.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/gogirl-cnc/!svn/ver/2/trunk/engines/Utility/Predis/lib/Predis/Protocol/ICommandSerializer.php
+END
+IResponseHandler.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/gogirl-cnc/!svn/ver/2/trunk/engines/Utility/Predis/lib/Predis/Protocol/IResponseHandler.php
+END

@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/gogirl-cnc/!svn/ver/39/trunk/engines/Utility
+END
+PHPExcelWrapper.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/gogirl-cnc/!svn/ver/2/trunk/engines/Utility/PHPExcelWrapper.php
+END
+FileUploader.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/gogirl-cnc/!svn/ver/2/trunk/engines/Utility/FileUploader.php
+END
+SessionManager.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/gogirl-cnc/!svn/ver/2/trunk/engines/Utility/SessionManager.php
+END
+CSVPrinter.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/gogirl-cnc/!svn/ver/2/trunk/engines/Utility/CSVPrinter.php
+END
+Mobile_Detect.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/gogirl-cnc/!svn/ver/2/trunk/engines/Utility/Mobile_Detect.php
+END
+CaptchaUtil.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/gogirl-cnc/!svn/ver/2/trunk/engines/Utility/CaptchaUtil.php
+END
+WordCloud.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/gogirl-cnc/!svn/ver/2/trunk/engines/Utility/WordCloud.php
+END
+Thumbnail.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/gogirl-cnc/!svn/ver/2/trunk/engines/Utility/Thumbnail.php
+END
+RequestManager.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/gogirl-cnc/!svn/ver/2/trunk/engines/Utility/RequestManager.php
+END
+Browser.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/gogirl-cnc/!svn/ver/2/trunk/engines/Utility/Browser.php
+END
+Debugger.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/gogirl-cnc/!svn/ver/2/trunk/engines/Utility/Debugger.php
+END
+Paginate.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/gogirl-cnc/!svn/ver/2/trunk/engines/Utility/Paginate.php
+END
+PHPExcel.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/gogirl-cnc/!svn/ver/2/trunk/engines/Utility/PHPExcel.php
+END

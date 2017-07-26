@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/gogirl-cnc/!svn/ver/30/trunk/admin_html/assets/js/tinymce/plugins/moxiemanager/classes/Auth
+END
+AuthManager.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/gogirl-cnc/!svn/ver/30/trunk/admin_html/assets/js/tinymce/plugins/moxiemanager/classes/Auth/AuthManager.php
+END
+IStandaloneAuthenticator.php
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/gogirl-cnc/!svn/ver/30/trunk/admin_html/assets/js/tinymce/plugins/moxiemanager/classes/Auth/IStandaloneAuthenticator.php
+END
+User.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/gogirl-cnc/!svn/ver/30/trunk/admin_html/assets/js/tinymce/plugins/moxiemanager/classes/Auth/User.php
+END
+Oauth2.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/gogirl-cnc/!svn/ver/30/trunk/admin_html/assets/js/tinymce/plugins/moxiemanager/classes/Auth/Oauth2.php
+END
+IAuthenticator.php
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/gogirl-cnc/!svn/ver/30/trunk/admin_html/assets/js/tinymce/plugins/moxiemanager/classes/Auth/IAuthenticator.php
+END

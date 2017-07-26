@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/gogirl-cnc/!svn/ver/76/trunk/templates/application/admin/apps
+END
+liststory.html
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/gogirl-cnc/!svn/ver/55/trunk/templates/application/admin/apps/liststory.html
+END
+listregalfa.html
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/gogirl-cnc/!svn/ver/40/trunk/templates/application/admin/apps/listregalfa.html
+END
+addbanner.html
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/gogirl-cnc/!svn/ver/48/trunk/templates/application/admin/apps/addbanner.html
+END
+listcomment.html
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/gogirl-cnc/!svn/ver/44/trunk/templates/application/admin/apps/listcomment.html
+END
+listregister.html
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/gogirl-cnc/!svn/ver/76/trunk/templates/application/admin/apps/listregister.html
+END
+listbanner.html
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/gogirl-cnc/!svn/ver/40/trunk/templates/application/admin/apps/listbanner.html
+END
+addquiz.html
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/gogirl-cnc/!svn/ver/59/trunk/templates/application/admin/apps/addquiz.html
+END
+listquiz.html
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/gogirl-cnc/!svn/ver/59/trunk/templates/application/admin/apps/listquiz.html
+END
+editstory.html
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/gogirl-cnc/!svn/ver/55/trunk/templates/application/admin/apps/editstory.html
+END
+home.html
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/gogirl-cnc/!svn/ver/73/trunk/templates/application/admin/apps/home.html
+END
+addstory.html
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/gogirl-cnc/!svn/ver/48/trunk/templates/application/admin/apps/addstory.html
+END
+editbanner.html
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/gogirl-cnc/!svn/ver/39/trunk/templates/application/admin/apps/editbanner.html
+END

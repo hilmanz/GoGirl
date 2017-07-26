@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/gogirl-cnc/!svn/ver/2/trunk/engines/Utility/Predis/lib/Predis/Transaction
+END
+AbortedMultiExecException.php
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/gogirl-cnc/!svn/ver/2/trunk/engines/Utility/Predis/lib/Predis/Transaction/AbortedMultiExecException.php
+END
+MultiExecContext.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/gogirl-cnc/!svn/ver/2/trunk/engines/Utility/Predis/lib/Predis/Transaction/MultiExecContext.php
+END

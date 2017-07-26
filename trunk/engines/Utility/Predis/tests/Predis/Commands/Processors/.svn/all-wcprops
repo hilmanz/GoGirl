@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/gogirl-cnc/!svn/ver/2/trunk/engines/Utility/Predis/tests/Predis/Commands/Processors
+END
+ProcessorChainTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/gogirl-cnc/!svn/ver/2/trunk/engines/Utility/Predis/tests/Predis/Commands/Processors/ProcessorChainTest.php
+END
+KeyPrefixProcessorTest.php
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/gogirl-cnc/!svn/ver/2/trunk/engines/Utility/Predis/tests/Predis/Commands/Processors/KeyPrefixProcessorTest.php
+END

@@ -1,0 +1,141 @@
+{literal}
+<script>
+	tinyMCE.init({
+		theme : "advanced",
+        mode : "exact",
+        elements : "teditor,idtok",
+		plugins : "autolink,lists,spellchecker,pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template",
+		paste_remove_styles: true,
+		paste_auto_cleanup_on_paste : true,
+		
+		theme_advanced_buttons1 : "bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,|,styleselect,formatselect,fontselect,fontsizeselect",
+        theme_advanced_buttons2 : "cut,copy,paste,pastetext,pasteword,|,search,replace,|,bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|,link,unlink,anchor,image,cleanup,help,code,|,insertdate,inserttime,preview,|,forecolor,backcolor",
+        theme_advanced_buttons3 : "tablecontrols,|,hr,removeformat,visualaid,|,sub,sup,|,charmap,emotions,iespell,media,advhr,|,ltr,rtl,|,fullscreen",
+        theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,styleprops,spellchecker,|,cite,abbr,acronym,del,ins,attribs,|,visualchars,nonbreaking,template,blockquote,pagebreak,|,insertfile,insertimage",
+
+		file_browser_callback : "ajaxfilemanager",
+		paste_use_dialog : true,
+		theme_advanced_resizing : true,
+		theme_advanced_resize_horizontal : true,
+		apply_source_formatting : true,
+		force_br_newlines : true,
+		force_p_newlines : false,	
+		relative_urls : true,
+		
+		theme_advanced_toolbar_location : "top",
+		theme_advanced_toolbar_align : "left",
+		theme_advanced_statusbar_location : "bottom",
+		theme_advanced_resizing : true
+	});
+	function ajaxfilemanager(field_name, url, type, win) {
+		var ajaxfilemanagerurl = "../admin/jscripts/tiny_mce/plugins/ajaxfilemanager/ajaxfilemanager.php";
+		var view = 'detail';
+		switch (type) {
+			case "image":
+			view = 'thumbnail';
+				break;
+			case "media":
+				break;
+			case "flash": 
+				break;
+			case "file":
+				break;
+			default:
+				return false;
+		}
+		tinyMCE.activeEditor.windowManager.open({
+		    url: "../admin/jscripts/tiny_mce/plugins/ajaxfilemanager/ajaxfilemanager.php?view=" + view,
+		    width: 800,
+		    height: 700,
+		    inline : "yes",
+		    close_previous : "no"
+		},{window : win, input : field_name });
+	}
+	
+function validator(){
+	tinyMCE.triggerSave();
+	if( $('#title').val() == '' ){
+		alert("Please fill title");
+		return false;
+	}
+}
+</script>
+{/literal}
+
+<div class="page_section" id="project-page">
+    <div id="container">
+	
+	
+				 <div id="container">
+        <div class="titlebox">
+            <h2 class="fl"><span class="icon-newspaper">&nbsp;</span> Add Article</h2>
+            <h2 class="fr"><a href="{$basedomain}story" class="button2">Back</a></h2>
+        </div><!-- end .titlebox -->
+        <div class="content">
+            <div class="summary">
+            </div><!-- end .summary -->
+
+            <form id="forms" class="forms" method="post" action="" enctype="multipart/form-data">
+				<div id="new-project" class="boxcontent">
+						<section class="step1">
+						<div class="row">
+							<label for="title">Title<br></label>
+							<input id="title" name="title" type="text" value="{$storynya.title}" class="required mandatory" ><br>
+						</div><!-- end .row -->
+						<div class="row">
+							<label for="title">Nama<br></label>
+							<input id="title" name="nama" type="text" value="{$storynya.name}" class="required mandatory" ><br>
+						</div><!-- end .row -->
+						<div class="row">
+						<label for="Date">Description 	:</label></label>
+							<textarea  cols="100" id="teditor"   name="description" class="required mandatory" >{$storynya.content}</textarea><br>
+							<label class="msg_name" style="color: red;">{$Description_no}</label>
+						</div>
+					 
+						 	<div class="row">
+						<label for="Date">category 	:</label>
+							<select  name="category" type="text" value="{$category}"  >
+							<option>Please Select</option>
+							<option {if $storynya.id_category==1} selected {/if} value=1>Style</option>
+							<option {if $storynya.id_category==2} selected {/if}  value=2>Event</option>
+							<option {if $storynya.id_category==3} selected {/if}value=3>Skin</option>
+							<option {if $storynya.id_category==4} selected {/if} value=4>Diy</option>
+							<option {if $storynya.id_category==5} selected {/if} value=5>Relations</option>
+							</select>
+						</div>
+					 
+				   
+						<div class="row">
+							<label for="Date">Upload Home Img Content<br></label>
+							{if $storynya.img_home}
+							<img src="{$basedomainpath}public_html/public_assets/imgregistrasi/{$storynya.img_home}" style="width: 200px;" >
+							
+							{/if}
+							<input name="img_home" id="img_home"  type="file" class="required"  style="width: 200px;">
+                        	<i> *ukuran File 320 x 180 pixel {$photo_no}</i>
+						</div><!-- end .row -->
+						 <div class="row">
+							<label for="Date">Upload Views Img Content<br></label>
+							{if $storynya.img}
+								<img src="{$basedomainpath}public_html/public_assets/imgregistrasi/{$storynya.img}" style="width: 200px;" >
+							{/if}
+							<input name="img_content" id="img_content"  type="file" class="required"  style="width: 200px;">
+                        	<i> *ukuran File 800 x 600 pixel {$photo_no}</i>
+						</div><!-- end .row -->
+						
+						 <div class="row">
+						<input type="hidden" name="submit" value="1">
+						<input type="hidden" name="id" value="{$storynya.id}">
+						<input type="hidden" name="userreg" value="{$paramreg}">
+							<input type="submit" value="SAVE" class="button3"  />
+							 <a href="{$basedomain}users" class="button4">CANCEL</a>
+							<small class="msg">{$status.msgee}</small>
+							<small class="msg">{$status.msg}</small>
+						</div><!-- end .row -->
+						</section>
+				</div><!-- end #wizard -->
+            </form>
+        </div><!-- end .content -->
+	
+    </div><!-- end #container -->
+</div><!-- end #home -->
